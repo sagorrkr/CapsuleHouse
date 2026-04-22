@@ -73,7 +73,7 @@ export default function FloatingBar() {
       <div className="relative w-14 h-14">
         {/* WhatsApp */}
         <a
-          href="https://wa.me/8613222525102"
+          href="https://wa.me/8613585405652"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
