@@ -15,7 +15,7 @@ export default function CatalogDownload() {
             </span>
             <h2 className="font-heading text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
               Get the Full <br />
-              <span className="text-emerald-400">2025 Product Catalog</span>
+              <span className="text-emerald-400">2026 Product Catalog</span>
             </h2>
             <p className="text-slate-300 text-lg mb-0 leading-relaxed">
               Explore highly detailed specifications, comprehensive floor plans, and a complete high-definition image gallery of all our capsule house models. Includes pricing structures and custom branding options.
@@ -32,7 +32,7 @@ export default function CatalogDownload() {
               <span className="text-xs opacity-70 font-medium">PDF</span>
             </a>
             <p className="text-center text-slate-400 text-[10px] mt-4 uppercase tracking-widest font-semibold">
-              Updated: April 2024
+              Updated: April 2026
             </p>
           </div>
         </div>
