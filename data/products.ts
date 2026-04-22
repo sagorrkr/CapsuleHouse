@@ -76,8 +76,8 @@ export const products: Product[] = [
     floors: 2,
     guests: '4 persons',
     weight: '7,000 kg',
-    image: '',
-    images: [],
+    image: '/images/products/Double layer space capsule.jpg',
+    images: ['/images/products/Double layer space capsule.jpg'],
     description: 'A modular double-layer cluster configuration in a 3×3 array — purpose-built for resort villages, commercial spaces, and larger developments requiring a repeatable, scalable unit.',
     specs: [
       { label: 'Module Size', value: 'L 11,500 × W 3,200 × H 3,200 mm' },
