@@ -55,8 +55,8 @@ export const products: Product[] = [
     floors: 1,
     guests: '2–4 persons',
     weight: '7,000 kg',
-    image: '/images/products/f7-capsule.png',
-    images: ['/images/products/f7-capsule.png'],
+    image: '/images/products/f7-capsule.jpg',
+    images: ['/images/products/f7-capsule.jpg'],
     size: 'L 11,500 × W 3,300 × H 3,200 mm',
     description: 'The F7 extends the capsule footprint to 11.5 m, comfortably accommodating small families or groups. Full panoramic glass façade, panoramic balcony, and a complete smart interior finish.',
     specs: [
