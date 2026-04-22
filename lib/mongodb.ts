@@ -1,9 +1,3 @@
-// ─────────────────────────────────────────────
-// MongoDB Connection Singleton
-// ─────────────────────────────────────────────
-// Uses a global cached connection to avoid
-// multiple connections in Next.js development HMR
-
 import mongoose from 'mongoose';
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
@@ -19,7 +13,6 @@ interface MongooseCache {
   promise: Promise<typeof mongoose> | null;
 }
 
-// Extend global to persist cached connection across hot-reloads
 declare global {
   // eslint-disable-next-line no-var
   var mongooseCache: MongooseCache;

@@ -1,8 +1,3 @@
-// ─────────────────────────────────────────────
-// API Route: GET /api/products
-// Returns products from MongoDB, falls back to static data
-// ─────────────────────────────────────────────
-
 import { NextResponse } from 'next/server';
 import { products as staticProducts } from '@/data/products';
 
@@ -17,7 +12,7 @@ export async function GET() {
     const ProductModel = (await import('@/models/Product')).default;
 
     await connectDB();
-    const dbProducts = await ProductModel.find({}).lean();
+    const dbProducts = await ProductModel.find({} as never).lean();
 
     // If DB is empty, return static data
     if (!dbProducts || dbProducts.length === 0) {

@@ -1,19 +1,8 @@
-// ─────────────────────────────────────────────
-// Mongoose Product Model
-// ─────────────────────────────────────────────
-// This model mirrors the Product type in types/index.ts
-// It allows you to store and query products from MongoDB
-//
-// Note: Mongoose uses 'model' as a reserved method name,
-// so we store it in the schema as-is via a plain object.
-
 import mongoose, { Schema, Document } from 'mongoose';
 import { Product } from '@/types';
 
 export type ProductDocument = Product & Document;
 
-// Use a plain object schema to avoid TypeScript conflicts with
-// Mongoose's built-in 'model' method name
 const ProductSchema = new Schema(
   {
     slug: { type: String, required: true, unique: true },
@@ -45,7 +34,6 @@ const ProductSchema = new Schema(
   { timestamps: true }
 );
 
-// Prevent model re-registration in Next.js dev HMR
 const ProductModel =
   mongoose.models['Product'] ||
   mongoose.model('Product', ProductSchema);

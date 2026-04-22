@@ -60,14 +60,20 @@ export default async function ProductDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Image */}
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-slate-800">
-              <Image
-                src={product.image}
-                alt={`${product.name} capsule house`}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
+              {product.image ? (
+                <Image
+                  src={product.image}
+                  alt={`${product.name} capsule house`}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-slate-500 text-sm font-medium tracking-wide">
+                  Photo coming soon
+                </div>
+              )}
               {product.badge && (
                 <div className="absolute top-5 left-5 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                   {product.badge}

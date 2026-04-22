@@ -87,13 +87,19 @@ function ProductCard({ product }: { product: Product }) {
 
       {/* Image */}
       <div className="relative h-52 overflow-hidden bg-slate-100">
-        <Image
-          src={product.image}
-          alt={`${product.name} capsule house`}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={`${product.name} capsule house`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-slate-300 text-sm font-medium tracking-wide">
+            Photo coming soon
+          </div>
+        )}
         <div className="glare-container">
           <div className="glare" />
         </div>

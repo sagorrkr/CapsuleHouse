@@ -1,18 +1,18 @@
 import Link from 'next/link';
 
 const productLinks = [
-  { label: 'E3 Orbit Cabin', href: '/products/e3-orbit-cabin' },
-  { label: 'E5 Nova Pod', href: '/products/e5-nova-pod' },
-  { label: 'E7 Stellar Lodge', href: '/products/e7-stellar-lodge' },
-  { label: 'F5 Dune Pod', href: '/products/f5-dune-pod' },
-  { label: 'F7 Ridge Cabin', href: '/products/f7-ridge-cabin' },
-  { label: 'Zenith Twin', href: '/products/zenith-twin-double-layer' },
+  { label: 'F3 — Double Floor', href: '/products/f3-space-capsule' },
+  { label: 'F5 — Compact', href: '/products/f5-space-capsule' },
+  { label: 'F7 — Spacious', href: '/products/f7-space-capsule' },
+  { label: 'Double Layer Cluster', href: '/products/double-layer-capsule' },
+  { label: 'N7 Apple Cabin', href: '/products/n7-apple-cabin' },
+  { label: 'H7 Apple Cabin', href: '/products/h7-apple-cabin' },
 ];
 
 const moreProducts = [
-  { label: 'N7 Forest Cabin', href: '/products/n7-forest-cabin' },
-  { label: 'H7 Meadow Pod', href: '/products/h7-meadow-pod' },
-  { label: 'H3 Steam Pod', href: '/products/h3-steam-pod' },
+  { label: 'Shark Capsule', href: '/products/shark-capsule' },
+  { label: 'Apple Cabin Tea Room', href: '/products/apple-cabin-tea-room' },
+  { label: 'H3 Sauna Room', href: '/products/h3-sauna-room' },
   { label: 'Custom Builds', href: '/#customize' },
 ];
 

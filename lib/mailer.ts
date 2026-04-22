@@ -1,9 +1,3 @@
-// ─────────────────────────────────────────────
-// Nodemailer Transporter
-// ─────────────────────────────────────────────
-// Configured for Gmail SMTP (App Password required)
-// See README.md for full setup guide
-
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({

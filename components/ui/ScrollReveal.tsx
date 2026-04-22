@@ -3,11 +3,6 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-/**
- * ScrollReveal — Observes all `.reveal` elements and adds `.active`
- * when they enter the viewport. This is a client component so it can
- * safely use browser APIs.
- */
 export default function ScrollReveal() {
   const pathname = usePathname();
 
