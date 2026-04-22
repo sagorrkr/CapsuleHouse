@@ -18,7 +18,7 @@ export const blogPosts: BlogPostFull[] = [
       'Traditional construction is slow and impossible to scale. We asked: what if a quality home could be manufactured like a precision product?',
     image: '/images/products/f5-capsule.jpg',
     date: 'January 15, 2025',
-    author: 'Ridoy, Founder',
+    author: 'Zhang WeiFei, Founder',
     readTime: '4 min read',
     body: [
       {
@@ -69,7 +69,7 @@ export const blogPosts: BlogPostFull[] = [
       'Tourism is recovering globally. Capsule homes deploy in days — here\'s why that changes everything for resort developers.',
     image: '/images/products/n7-apple-cabin.jpg',
     date: 'February 3, 2025',
-    author: 'Ridoy, Founder',
+    author: 'Wang XiaoLei, Founder',
     readTime: '5 min read',
     body: [
       {
@@ -116,7 +116,7 @@ export const blogPosts: BlogPostFull[] = [
       'A client brief becomes a finished themed capsule home. Walk through a real project from concept to delivery.',
     image: '/images/products/shark-capsule.jpg',
     date: 'March 10, 2025',
-    author: 'Ridoy, Founder',
+    author: 'XYZ, Director In charge',
     readTime: '6 min read',
     body: [
       {
