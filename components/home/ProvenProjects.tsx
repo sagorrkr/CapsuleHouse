@@ -1,30 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-
-const projects = [
-  {
-    title: 'Changzhou Lakeside Resort',
-    location: 'Jiangsu, China',
-    date: 'March 2024',
-    description: 'A cluster of 12 E5 Nova Pods integrated with smart home controls for a premium glamping experience.',
-    image: '/images/products/ChangzhouLakesideCustomize.jpg',
-  },
-  {
-    title: 'Desert Mirage Retreat',
-    location: 'Ningxia, China',
-    date: 'November 2023',
-    description: '8 F5 Dune Pods featuring heat-reflective aluminium shells and custom desert-proof insulation systems.',
-    image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&q=80',
-  },
-  {
-    title: 'Mountain Ridge Escape',
-    location: 'Sichuan, China',
-    date: 'January 2024',
-    description: '4 Ridge Cabin F7 units deployed in high-altitude terrain with snow-load rated roofs.',
-    image: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&q=80',
-  },
-];
+import Link from 'next/link';
+import { projects } from '@/data/projects';
 
 export default function ProvenProjects() {
   return (
@@ -43,9 +21,9 @@ export default function ProvenProjects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {projects.map((project, idx) => (
+          {projects.map((project) => (
             <div
-              key={idx}
+              key={project.slug}
               className="reveal group bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 hover:border-emerald-200 transition-all shadow-sm hover:shadow-2xl"
             >
               <div className="relative h-64 overflow-hidden">
@@ -58,16 +36,22 @@ export default function ProvenProjects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1b2a]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute bottom-6 left-6 right-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
                   <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-1">{project.location}</p>
-                  <p className="text-sm font-medium">{project.date}</p>
+                  <p className="text-sm font-medium">{project.date} · {project.units} units</p>
                 </div>
               </div>
               <div className="p-8">
                 <h3 className="font-heading text-2xl font-bold text-[#0d1b2a] mb-3 leading-tight group-hover:text-emerald-700 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-slate-500 text-sm leading-relaxed mb-5">
                   {project.description}
                 </p>
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="text-emerald-600 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                >
+                  View project <span>→</span>
+                </Link>
               </div>
             </div>
           ))}
@@ -76,10 +60,10 @@ export default function ProvenProjects() {
         <div className="mt-16 text-center reveal">
           <p className="text-slate-400 text-sm mb-6 italic">Looking for more examples from our portfolio?</p>
           <a
-            href="/#catalog"
+            href="/#contact"
             className="btn btn-outline border-slate-200 text-slate-600 hover:bg-[#0d1b2a] hover:text-white hover:border-[#0d1b2a] rounded-full px-10 transition-all font-semibold"
           >
-            View More in Catalog
+            Request Our Full Portfolio
           </a>
         </div>
       </div>

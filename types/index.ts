@@ -23,12 +23,27 @@ export interface TrustStat {
 }
 
 export interface BlogPost {
-  id: string;
+  slug: string;
   category: string;
   title: string;
   excerpt: string;
   image: string;
-  href: string;
+  date: string;
+  author: string;
+  readTime: string;
+}
+
+export interface Project {
+  slug: string;
+  title: string;
+  location: string;
+  date: string;
+  units: number;
+  models: string;
+  description: string;
+  image: string;
+  images?: string[];
+  highlights: string[];
 }
 
 export interface ContactFormData {
