@@ -76,7 +76,7 @@ function ContactForm() {
               Get in Touch
             </h2>
             <p className="text-slate-400 leading-relaxed mb-10 max-w-sm">
-              Product enquiries, custom project briefs, or general questions —
+              Product enquiries, custom project briefs, or general questions
               we aim to reply within 24 hours.
             </p>
 
