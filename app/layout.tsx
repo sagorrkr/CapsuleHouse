@@ -3,7 +3,7 @@ import { Barlow, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import WhatsAppButton from '@/components/ui/WhatsAppButton';
+import FloatingBar from '@/components/ui/FloatingBar';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const barlow = Barlow({
@@ -47,7 +47,7 @@ export default function RootLayout({
         <Navbar />
         <main className="relative z-0" style={{ isolation: 'isolate' }}>{children}</main>
         <Footer />
-        <WhatsAppButton />
+        <FloatingBar />
         <ScrollReveal />
       </body>
     </html>

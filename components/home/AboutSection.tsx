@@ -30,14 +30,14 @@ export default function AboutSection() {
               className="absolute top-0 left-0 w-4/5 h-4/5 rounded-3xl bg-cover bg-center shadow-2xl"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=70')",
+                  "url('/images/products/about-top.jpg')",
               }}
             />
             <div
               className="absolute bottom-0 right-0 w-3/5 h-3/5 rounded-3xl bg-cover bg-center shadow-2xl border-4 border-white"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1560440021-33f9b867899d?w=600&q=70')",
+                  "url('/images/products/about-bottom.jpg')",
               }}
             />
           </div>

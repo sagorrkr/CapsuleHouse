@@ -67,7 +67,7 @@ export default function CustomizeSection() {
                 className="absolute inset-0 bg-cover bg-center opacity-25"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=70')",
+                    "url('/images/products/shark-tea-room.jpg')",
                 }}
               />
               <div className="relative z-10">
