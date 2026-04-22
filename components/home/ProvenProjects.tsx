@@ -8,7 +8,7 @@ const projects = [
     location: 'Jiangsu, China',
     date: 'March 2024',
     description: 'A cluster of 12 E5 Nova Pods integrated with smart home controls for a premium glamping experience.',
-    image: 'https://images.unsplash.com/photo-1544015759-237f4042a8e5?w=800&q=80',
+    image: 'CapsuleHouse/public/images/products/ChangzhouLakesideCustomize.jpg',
   },
   {
     title: 'Desert Mirage Retreat',
