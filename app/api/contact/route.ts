@@ -57,7 +57,8 @@ export async function POST(req: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    console.error('Contact form error:', error);
+    const message = error instanceof Error ? error.message : String(error);
+    console.error('[/api/contact] Failed to send enquiry email:', message);
     return NextResponse.json(
       { error: 'Failed to send enquiry. Please try again or contact us directly.' },
       { status: 500 }
