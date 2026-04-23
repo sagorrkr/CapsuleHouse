@@ -46,20 +46,20 @@ export default async function ProductDetailPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-28 pb-0 bg-[#0d1b2a]">
+      <section className="relative pt-28 pb-0 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 py-12">
           {/* Breadcrumb */}
           <nav className="text-slate-400 text-sm mb-8 flex items-center gap-2">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#0d1b2a] transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/#products" className="hover:text-white transition-colors">Products</Link>
+            <Link href="/#products" className="hover:text-[#0d1b2a] transition-colors">Products</Link>
             <span>/</span>
-            <span className="text-slate-300">{product.model}</span>
+            <span className="text-slate-600">{product.model}</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Image */}
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-slate-800">
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-slate-100">
               {product.image ? (
                 <Image
                   src={product.image}
@@ -70,7 +70,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   className="object-cover"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-slate-500 text-sm font-medium tracking-wide">
+                <div className="w-full h-full flex items-center justify-center text-slate-400 text-sm font-medium tracking-wide">
                   Photo coming soon
                 </div>
               )}
@@ -82,30 +82,30 @@ export default async function ProductDetailPage({ params }: Props) {
             </div>
 
             {/* Info */}
-            <div className="text-white">
-              <div className="font-heading text-7xl font-extrabold text-emerald-400 mb-2">
+            <div>
+              <div className="font-heading text-7xl font-extrabold text-emerald-600 mb-2">
                 {product.model}
               </div>
-              <h1 className="font-heading text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+              <h1 className="font-heading text-4xl lg:text-5xl font-extrabold text-[#0d1b2a] mb-4 leading-tight">
                 {product.name}
               </h1>
 
               {product.description && (
-                <p className="text-slate-300 leading-relaxed mb-8">
+                <p className="text-slate-500 leading-relaxed mb-8">
                   {product.description}
                 </p>
               )}
 
               {/* Specs */}
-              <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-8">
-                <h3 className="font-heading text-lg font-bold text-white mb-4 tracking-wider uppercase">
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 mb-8">
+                <h3 className="font-heading text-lg font-bold text-[#0d1b2a] mb-4 tracking-wider uppercase">
                   Specifications
                 </h3>
                 <div className="space-y-3">
                   {product.specs.map((spec) => (
-                    <div key={spec.label} className="flex justify-between border-b border-white/5 pb-3">
+                    <div key={spec.label} className="flex justify-between border-b border-slate-100 pb-3">
                       <span className="text-slate-400 text-sm">{spec.label}</span>
-                      <span className="text-white text-sm font-medium text-right max-w-[60%]">
+                      <span className="text-[#0d1b2a] text-sm font-medium text-right max-w-[60%]">
                         {spec.value}
                       </span>
                     </div>

@@ -21,6 +21,7 @@ function ContactForm() {
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [unitsError, setUnitsError] = useState('');
 
   useEffect(() => {
     const modelParam = searchParams.get('model') || searchParams.get('product');
@@ -36,6 +37,13 @@ function ContactForm() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+    if (name === 'units') {
+      if (value !== '' && (!/^\d+$/.test(value) || parseInt(value) < 1)) {
+        setUnitsError('Please enter a whole number (e.g. 5)');
+      } else {
+        setUnitsError('');
+      }
+    }
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -181,14 +189,23 @@ function ContactForm() {
                     </label>
                     <input
                       id="contact-units"
-                      type="text"
+                      type="number"
                       name="units"
-                      placeholder="e.g. 5–10"
+                      placeholder="e.g. 5"
+                      min={1}
+                      max={9999}
                       value={form.units}
                       onChange={handleChange}
                       required
-                      className="input input-bordered w-full rounded-xl border-slate-200 focus:border-emerald-500 focus:outline-none"
+                      className={`input input-bordered w-full rounded-xl focus:outline-none ${
+                        unitsError
+                          ? 'border-red-400 focus:border-red-400'
+                          : 'border-slate-200 focus:border-emerald-500'
+                      }`}
                     />
+                    {unitsError && (
+                      <p className="text-red-500 text-xs mt-1">{unitsError}</p>
+                    )}
                   </div>
                 </div>
 
@@ -216,7 +233,7 @@ function ContactForm() {
                 <button
                   id="contact-submit"
                   type="submit"
-                  disabled={status === 'loading' || !form.name || !form.email || !form.product || !form.units}
+                  disabled={status === 'loading' || !form.name || !form.email || !form.product || !form.units || !!unitsError}
                   className="btn w-full bg-[#0d1b2a] hover:bg-emerald-700 text-white border-0 rounded-xl py-3 font-semibold text-base transition-all hover:scale-[1.02] disabled:opacity-50 disabled:grayscale-[0.5] disabled:cursor-not-allowed"
                 >
                   {status === 'loading' ? (
