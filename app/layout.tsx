@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Barlow, Barlow_Condensed } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -49,6 +50,9 @@ export default function RootLayout({
         <Footer />
         <FloatingBar />
         <ScrollReveal />
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );

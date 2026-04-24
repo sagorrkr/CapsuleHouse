@@ -33,6 +33,11 @@ function esc(s: string): string {
     .replace(/"/g, '&quot;');
 }
 
+// Strip newlines from strings used in email subject lines to prevent header injection
+function safeSubject(s: string): string {
+  return s.replace(/[\r\n]/g, ' ').trim();
+}
+
 export async function sendEnquiryEmail(data: EnquiryEmailPayload): Promise<void> {
   const transporter = getTransporter();
 
@@ -47,7 +52,7 @@ export async function sendEnquiryEmail(data: EnquiryEmailPayload): Promise<void>
     from: `"Flower Capsule Enquiry" <${process.env.SMTP_FROM}>`,
     to: process.env.SMTP_TO,
     replyTo: data.email,
-    subject: `New Enquiry from ${name} — ${product || 'General'}`,
+    subject: `New Enquiry from ${safeSubject(data.name)} — ${safeSubject(data.product) || 'General'}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: #0d1b2a; padding: 24px; border-radius: 8px 8px 0 0;">
