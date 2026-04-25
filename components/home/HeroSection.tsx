@@ -13,7 +13,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center lg:text-left">
         <div className="max-w-3xl">
           <div className="fadein fadein-1 inline-block bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-2 rounded-full mb-8">
-            Smart Modular Living &middot; Changzhou, China gigigugig
+            Smart Modular Living &middot; Changzhou, China
           </div>
 
           <h1 className="fadein fadein-2 font-heading text-6xl sm:text-7xl lg:text-8xl font-extrabold text-white leading-[0.95] mb-6">
