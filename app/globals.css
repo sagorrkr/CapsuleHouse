@@ -113,6 +113,6 @@ html[data-reveal="on"] .reveal.active {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=70') center/cover no-repeat;
-  opacity: 0.18;
+  background: url('/images/products/f5-capsule.jpg') center/cover no-repeat;
+  opacity: 0.25;
 }
