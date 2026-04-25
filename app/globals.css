@@ -32,15 +32,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── Scroll Reveal ── */
+/* Elements are visible by default (no JS = always visible).
+   The data-reveal attribute is set by ScrollReveal before the first paint,
+   so non-active elements are hidden only once JS has marked in-viewport
+   items as .active first — no flash of invisible content. */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
   transition: opacity 0.65s ease, transform 0.65s ease;
   will-change: transform, opacity;
   backface-visibility: hidden;
   transform-style: flat;
 }
-.reveal.active {
+html[data-reveal="on"] .reveal:not(.active) {
+  opacity: 0;
+  transform: translateY(30px);
+}
+html[data-reveal="on"] .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }

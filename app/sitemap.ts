@@ -3,7 +3,7 @@ import { products } from '@/data/products';
 import { blogPosts } from '@/data/blogPosts';
 import { projects } from '@/data/projects';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowercapsule.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowercapsulehouse.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

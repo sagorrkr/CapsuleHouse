@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { ContactFormData } from '@/types';
 import { products } from '@/data/products';
 
@@ -11,7 +10,6 @@ const productOptions = [
 ];
 
 function ContactForm() {
-  const searchParams = useSearchParams();
   const [form, setForm] = useState<ContactFormData>({
     name: '',
     email: '',
@@ -24,14 +22,15 @@ function ContactForm() {
   const [unitsError, setUnitsError] = useState('');
 
   useEffect(() => {
-    const modelParam = searchParams.get('model') || searchParams.get('product');
+    const params = new URLSearchParams(window.location.search);
+    const modelParam = params.get('model') || params.get('product');
     if (modelParam) {
       const matched = productOptions.find((opt) =>
         opt.toLowerCase().includes(modelParam.toLowerCase())
       );
       setForm((prev) => ({ ...prev, product: matched ?? modelParam }));
     }
-  }, [searchParams]);
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -255,9 +254,5 @@ function ContactForm() {
 }
 
 export default function ContactSection() {
-  return (
-    <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center text-white/50">Loading form...</div>}>
-      <ContactForm />
-    </Suspense>
-  );
+  return <ContactForm />;
 }
