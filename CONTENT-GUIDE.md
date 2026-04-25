@@ -9,6 +9,7 @@ This file explains how to update website content without touching the design or 
 Each product is an object in the `products` array. To edit a product, find it by `slug` and update the fields.
 
 **Key fields:**
+
 - `name` — full display name
 - `description` — shown on the product detail page
 - `floorArea`, `guests`, `weight` — shown on the card and detail page
@@ -18,6 +19,7 @@ Each product is an object in the `products` array. To edit a product, find it by
 - `badge` — optional pill badge (e.g. `"Most Popular"`)
 
 **To add a new product:**
+
 1. Add a new object to the `products` array in `data/products.ts`
 2. Copy the structure of an existing product and fill in all fields
 3. Add the product image to `public/images/products/`
@@ -30,12 +32,13 @@ Each product is an object in the `products` array. To edit a product, find it by
 Each post is an object in the `blogPosts` array.
 
 **Key fields:**
+
 - `slug` — URL slug, e.g. `"my-new-post"` → page at `/blog/my-new-post`
 - `title`, `excerpt` — shown on the blog card and detail page
 - `category` — small tag above the title (e.g. `"Founder's Note · Vision"`)
 - `image` — path like `/images/products/f5-capsule.jpg`
 - `date` — e.g. `"April 20, 2025"`
-- `author` — e.g. `"Ridoy, Founder"`
+- `author` — e.g. `"Zhang WeiFei, Founder"`
 - `readTime` — e.g. `"4 min read"`
 - `body` — array of content blocks (see below)
 
@@ -62,7 +65,7 @@ Each post is an object in the `blogPosts` array.
   excerpt: 'Short summary shown on the blog card (1–2 sentences).',
   image: '/images/products/n7-apple-cabin.jpg',
   date: 'April 20, 2025',
-  author: 'Ridoy, Founder',
+  author: 'Wang XiaoLei, Founder',
   readTime: '3 min read',
   body: [
     { type: 'p', text: 'Opening paragraph...' },
@@ -80,6 +83,7 @@ Each post is an object in the `blogPosts` array.
 Each project is an object in the `projects` array.
 
 **Key fields:**
+
 - `slug` — URL slug → page at `/projects/your-slug`
 - `title`, `description` — shown on the card and detail page
 - `location`, `date`, `units`, `models` — shown in the details sidebar
