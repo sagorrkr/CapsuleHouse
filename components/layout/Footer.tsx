@@ -38,7 +38,7 @@ export default function Footer() {
               manufacturer in Changzhou, Jiangsu, China.
             </p>
             <p className="text-xs text-slate-500">
-              ridoyrkr@outlook.com &middot; +86 132 2252 5102
+              Developer : ridoyrkr@outlook.com &middot; +86 132 2252 5102
             </p>
           </div>
 
