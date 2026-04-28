@@ -90,7 +90,7 @@ export async function sendEnquiryEmail(data: EnquiryEmailPayload): Promise<void>
           <p>We've received your enquiry about <strong>${product || 'our capsule homes'}</strong> and will get back to you within <strong>24 hours</strong>.</p>
           <p style="color: #666; font-size: 14px;">In the meantime, you can reach us directly at:</p>
           <ul style="color: #666; font-size: 14px;">
-            <li>Email: capsulehouse0@gmail.com</li>
+            <li>Email: ace@flowercapsulehouse.com</li>
             <li>WhatsApp: +86 13585405652</li>
           </ul>
           <p>— The Flower Smart Technology Team</p>
