@@ -117,7 +117,7 @@ export const blogPosts: BlogPostFull[] = [
     image: '/images/products/shark-capsule.jpg',
     date: 'March 11, 2025',
     author: 'Lu Dash, Marketing Manager(Overseas)',
-    readTime: '6 min read',
+    readTime: '5 min read',
     body: [
       {
         type: 'p',
