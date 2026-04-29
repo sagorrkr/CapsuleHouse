@@ -69,7 +69,7 @@ export const blogPosts: BlogPostFull[] = [
       'Tourism is recovering globally. Capsule homes deploy in days — here\'s why that changes everything for resort developers.',
     image: '/images/products/n7-apple-cabin.jpg',
     date: 'February 3, 2025',
-    author: 'Wang XiaoLei, Founder',
+    author: 'Wang XiaoLei, Co-Founder',
     readTime: '5 min read',
     body: [
       {
