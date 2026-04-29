@@ -116,7 +116,7 @@ export const blogPosts: BlogPostFull[] = [
       'A client brief becomes a finished themed capsule home. Walk through a real project from concept to delivery.',
     image: '/images/products/shark-capsule.jpg',
     date: 'March 10, 2025',
-    author: 'XYZ, Director In charge',
+    author: 'Lu Dash, Director In charge',
     readTime: '6 min read',
     body: [
       {
