@@ -91,6 +91,7 @@ export async function sendEnquiryEmail(data: EnquiryEmailPayload): Promise<void>
           <p style="color: #666; font-size: 14px;">In the meantime, you can reach us directly at:</p>
           <ul style="color: #666; font-size: 14px;">
             <li>Email: ace@flowercapsulehouse.com</li>
+            <li>Email: flowercapsulehouse@gmail.com</li>
             <li>WhatsApp: +86 13585405652</li>
           </ul>
           <p>— The Flower Smart Technology Team</p>

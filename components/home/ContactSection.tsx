@@ -89,7 +89,7 @@ function ContactForm() {
 
             <div className="space-y-6">
               {[
-                { icon: '✉️', label: 'Email', val: 'capsulehouse0@gmail.com' },
+                { icon: '✉️', label: 'Email', val: 'flowercapsulehouse@gmail.com' },
                 { icon: '📞', label: 'Phone / WhatsApp', val: '+86 13585405652' },
                 { icon: '📍', label: 'Address', val: 'Changzhou, Jiangsu, China' },
               ].map((c) => (
