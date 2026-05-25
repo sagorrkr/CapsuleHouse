@@ -48,7 +48,7 @@ export default function AboutSection() {
               About Us
             </span>
             <h2 className="font-heading text-4xl lg:text-5xl font-extrabold text-[#0d1b2a] mb-5">
-              Jiangsu Flower Smart <br />Technology Co., Ltd
+              Jiangsu Flower Intelligent <br />Technology Co., Ltd
             </h2>
             <p className="text-slate-500 leading-relaxed mb-4">
               We design, manufacture, and deliver fully finished capsule homes
