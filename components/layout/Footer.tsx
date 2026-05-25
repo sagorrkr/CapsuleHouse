@@ -34,7 +34,7 @@ export default function Footer() {
               FLOWER CAPSULE
             </div>
             <p className="text-sm leading-relaxed mb-3">
-              Jiangsu Flower Smart Technology Co., Ltd — modular capsule homes
+              Jiangsu Flower Intelligent Technology Co., Ltd — modular capsule homes
               manufacturer in Changzhou, Jiangsu, China.
             </p>
             <p className="text-xs text-slate-500">
