@@ -39,7 +39,7 @@ export default function Navbar() {
           >
             <div className="relative w-10 h-10 rounded-lg overflow-hidden border border-white/20">
               <Image 
-                src="/logo.jpg" 
+                src="/Logo2.jpg"
                 alt="Flower Capsule Logo" 
                 fill 
                 className="object-cover"

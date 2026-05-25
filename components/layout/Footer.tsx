@@ -103,7 +103,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-slate-500">
-            &copy; 2025 Jiangsu Flower Smart Technology Co., Ltd. All rights reserved.
+            &copy; 2025 Jiangsu Flower Intelligent Technology Co., Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a
