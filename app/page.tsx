@@ -7,6 +7,7 @@ import CustomizeSection from '@/components/home/CustomizeSection';
 import AboutSection from '@/components/home/AboutSection';
 import BlogSection from '@/components/home/BlogSection';
 import ContactSection from '@/components/home/ContactSection';
+import CertificationsSection from '@/components/home/CertificationsSection';
 
 import CatalogDownload from '@/components/home/CatalogDownload';
 import ProvenProjects from '@/components/home/ProvenProjects';
@@ -21,6 +22,7 @@ export default function HomePage() {
       <CustomizeSection />
       <CatalogDownload />
       <AboutSection />
+      <CertificationsSection />
       <BlogSection />
       <ProvenProjects />
       <ContactSection />
